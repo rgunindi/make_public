@@ -1,0 +1,23 @@
+[package]
+name = "make_public"
+version = "0.1.0"
+edition = "2021"
+authors = ["rgunindi"]
+description = "A procedural macro to make struct fields public"
+license = "MIT"
+repository = "https://github.com/rgunindi/make_public"
+documentation = "https://docs.rs/make_public"
+keywords = ["derive", "macro", "public", "struct", "attribute"]
+categories = ["development-tools", "rust-patterns"]
+readme = "README.md"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0", features = ["full", "extra-traits"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+
+[dev-dependencies]
+test_helper = { path = "test_helper" }
